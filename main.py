@@ -34,7 +34,7 @@ def whoami():
 
 @route("/")
 def default():
-    redirect("/index.html")
+    return "Welcome to the root path."
 
 
 @route("/login", method="POST")
@@ -116,4 +116,4 @@ session_opts = {
 app = SessionMiddleware(default_app(), session_opts)
 
 if __name__ == "__main__":
-    run(app=app, host="0.0.0.0", port=443, server=SSLCherryPyServer)
+    run(app=app, host="0.0.0.0", port=8443, server=SSLCherryPyServer)
