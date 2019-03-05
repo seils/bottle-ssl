@@ -34,7 +34,11 @@ def whoami():
 
 @route("/")
 def default():
-    return "Welcome to the root path."
+    return "Welcome to the root path.\n"
+
+
+def healthz():
+  return "healthz endpoint\n"
 
 
 @route("/login", method="POST")
