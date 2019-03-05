@@ -37,6 +37,7 @@ def default():
     return "Welcome to the root path.\n"
 
 
+@route("/healthz")
 def healthz():
   return "healthz endpoint\n"
 
